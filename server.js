@@ -17,6 +17,9 @@ app.use((err, req, res, next) => {
   });
 });
 
+// To view an uploaded image
+app.use("/uploads", express.static("uploads"));
+
 app.get('/', (req, res) => {
   res.send('Welcome to the Image Upload API');
 });
